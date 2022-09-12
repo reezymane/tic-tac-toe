@@ -17,3 +17,14 @@ header {
 
     width: 100px;
 }
+
+.mainContainer {
+    /*mainContainer grows to fill remaining space*/
+    flex: 1;
+}
+
+/*Background color for header and footer*/
+header,
+footer {
+    background-color: rgb(126, 191, 238);
+}
