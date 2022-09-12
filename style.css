@@ -21,6 +21,10 @@ header {
 .mainContainer {
     /*mainContainer grows to fill remaining space*/
     flex: 1;
+
+    /*Vertically align gameContainer and footer*/
+    display: flex;
+    flex-direction: column;
 }
 
 /*Background color for header and footer*/
