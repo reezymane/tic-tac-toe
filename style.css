@@ -38,6 +38,11 @@ footer {
     height: 100px;
 }
 
+.boardAndPlayers {
+    /*Display gameboard and player info side by side*/
+    display: flex;
+}
+
 .gameContainer {
     /*gameContainer grows to fill remaining space*/
     flex: 1;
@@ -46,4 +51,10 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 200px);
     grid-template-rows: repeat(3, 200px);
+    gap: 20px;
+}
+
+.gameBoard {
+    /*Set background for gameboard*/
+    background-color: black;
 }
