@@ -41,4 +41,9 @@ footer {
 .gameContainer {
     /*gameContainer grows to fill remaining space*/
     flex: 1;
+
+    /*Turn gameContainer into a grid for game board*/
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
 }
