@@ -28,3 +28,12 @@ header,
 footer {
     background-color: rgb(126, 191, 238);
 }
+
+footer {
+    /*Set footer height*/
+    height: 100px;
+}
+
+.gameContainer {
+
+}
