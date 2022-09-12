@@ -15,7 +15,7 @@ header {
     flex-direction: column;
     gap: 50px;
 
-    width: 100px;
+    width: 200px;
 }
 
 .mainContainer {
@@ -29,13 +29,14 @@ header {
 
 /*Background color for header and footer*/
 header,
-footer {
+footer,
+.playerInfo {
     background-color: rgb(126, 191, 238);
 }
 
 footer {
     /*Set footer height*/
-    height: 100px;
+    height: 200px;
 }
 
 .boardAndPlayers {
@@ -43,10 +44,12 @@ footer {
     display: flex;
 }
 
-.gameContainer {
-    /*gameContainer grows to fill remaining space*/
+.playerInfo {
+    /*playerInfo grows to fill remaining space*/
     flex: 1;
-
+}
+    
+.gameContainer {
     /*Turn gameContainer into a grid for game board*/
     display: grid;
     grid-template-columns: repeat(3, 200px);
