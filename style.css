@@ -16,6 +16,14 @@ header {
     gap: 50px;
 
     width: 200px;
+
+    /*Center title horizontally*/
+    align-items: center;
+
+    padding-top: 100px;
+
+    font-style: italic;
+    font-weight: bold;
 }
 
 .mainContainer {
