@@ -3,3 +3,15 @@
     margin: 0;
     padding: 0;
 }
+
+/*Place header on the left side of the page*/
+.pageContainer {
+    display: flex;
+}
+
+header {
+    /*Separate header divs to control spacing*/
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
