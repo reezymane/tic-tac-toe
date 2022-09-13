@@ -12,9 +12,13 @@ const player = (name, marker) => {
 
 // Controls what is displayed on the gameboard
 const displayController = (() => {
-    // Requests and stores info for Players 1 & 2
     let player1;
     let player2;
+
+    // Decides which player goes first
+    let firstMove = Math.floor(Math.random() * (2 - 1 + 1) ) + 1;
+
+    // Requests and stores info for Players 1 & 2
     const start = document.querySelector('.start');
     start.addEventListener('click', () => {
         const name = prompt('Player 1, enter your name!')
@@ -31,22 +35,37 @@ const displayController = (() => {
             player2 = player(name2, 'X');
         };
 
-        // Decides which player goes first
-        const firstMove = Math.floor(Math.random() * (2 - 1 + 1) ) + 1;
+        // Alerts which player goes first
         if (firstMove === 1) {
             alert(player1.name + ' gets the first move!');
         } else {
             alert(player2.name + ' gets the first move!');
-        }
+        };
     });
+
+  
     
+    // Switches turns between users and Adds players' markers to gameboard
+    let turnCount = 0;
     gameBoard.boardArray.forEach((div) => {
         div.addEventListener('click', () => {
-            // Renders players gameboard placement
-            const playerMove = document.createElement('p');
-            playerMove.textContent = 'x';
+            
+            function displayMove(player) {
+                const playerMove = document.createElement('p');
+                playerMove.textContent = player.marker;
 
-            div.appendChild(playerMove);
+                div.appendChild(playerMove);
+
+                turnCount += 1;
+            };
+
+            if (firstMove === 1) {
+                displayMove(player1);
+                firstMove += 1;
+            } else {
+                displayMove(player2);
+                firstMove -=1;
+            };
         });
-    })
+    });
 })();
