@@ -68,4 +68,5 @@ footer {
 .gameBoard {
     /*Set background for gameboard*/
     background-color: black;
+    color: antiquewhite;
 }
