@@ -30,6 +30,14 @@ const displayController = (() => {
             alert(name2 + '\'s marker is X!');
             player2 = player(name2, 'X');
         };
+
+        // Decides which player goes first
+        const firstMove = Math.floor(Math.random() * (2 - 1 + 1) ) + 1;
+        if (firstMove === 1) {
+            alert(player1.name + ' gets the first move!');
+        } else {
+            alert(player2.name + ' gets the first move!');
+        }
     });
     
     gameBoard.boardArray.forEach((div) => {
