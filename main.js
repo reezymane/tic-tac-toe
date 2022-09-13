@@ -46,29 +46,26 @@ const displayController = (() => {
         let turnCount = 0;
         gameBoard.boardArray.forEach((div) => {
             div.addEventListener('click', () => {
-            
-                function displayMove(player) {
-                    const playerMove = document.createElement('p');
-                    playerMove.textContent = player.marker;
+                // Checks div for a current player marker
+                if (div.firstChild == null) {
+                    function displayMove(player) {
+                        const playerMove = document.createElement('p');
+                        playerMove.textContent = player.marker;
                     
-            
-            // ADD IF STATEMENT TO CHECK IF THERE'S ALREADY A MARKER IN THAT DIV. IF SO, CREATE ERROR MESSAGE. NEST TURN COUNT INCREMENT.
-                    if (condition) {
                         div.appendChild(playerMove);
 
                         turnCount += 1;
-                    } else {
-                        
                     };
-                    
-                };
 
-                if (firstMove === 1) {
-                    displayMove(player1);
-                    firstMove += 1;
+                    if (firstMove === 1) {
+                        displayMove(player1);
+                        firstMove += 1;
+                    } else {
+                        displayMove(player2);
+                        firstMove -=1;
+                    };
                 } else {
-                    displayMove(player2);
-                    firstMove -=1;
+                    alert('OOPS! It looks like that spot is taken. Please choose a new spot on the board.');
                 };
             });
         });
