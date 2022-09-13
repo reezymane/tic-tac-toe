@@ -1,7 +1,7 @@
-// Stores the gameboard into an object
+// Stores the gameboard components into an object
 const gameBoard = (() => {
-    const gameObj = {
-        boardArray: []
+    return gameObj = {
+        boardArray: document.querySelectorAll('.gameBoard')
     };
 })();
 
