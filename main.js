@@ -67,6 +67,43 @@ const displayController = (() => {
                 } else {
                     alert('OOPS! It looks like that spot is taken. Please choose a new spot on the board.');
                 };
+
+                // Checks gameboard for winner or tie
+                if (gameBoard.boardArray[0].textContent != '' &&
+                    gameBoard.boardArray[0].textContent === gameBoard.boardArray[1].textContent &&
+                    gameBoard.boardArray[0].textContent === gameBoard.boardArray[2].textContent) {
+                    console.log('winner!');
+                } else if (gameBoard.boardArray[3].textContent != '' &&
+                    gameBoard.boardArray[3].textContent === gameBoard.boardArray[4].textContent &&
+                    gameBoard.boardArray[3].textContent === gameBoard.boardArray[5].textContent) {
+                    console.log('winner!');
+                } else if (gameBoard.boardArray[6].textContent != '' &&
+                    gameBoard.boardArray[6].textContent === gameBoard.boardArray[7].textContent &&
+                    gameBoard.boardArray[6].textContent === gameBoard.boardArray[8].textContent) {
+                    console.log('winner!');
+                } else if (gameBoard.boardArray[0].textContent != '' &&
+                    gameBoard.boardArray[0].textContent === gameBoard.boardArray[3].textContent &&
+                    gameBoard.boardArray[0].textContent === gameBoard.boardArray[6].textContent) {
+                    console.log('winner!');
+                } else if (gameBoard.boardArray[1].textContent != '' &&
+                    gameBoard.boardArray[1].textContent === gameBoard.boardArray[4].textContent &&
+                    gameBoard.boardArray[1].textContent === gameBoard.boardArray[7].textContent) {
+                    console.log('winner!');
+                } else if (gameBoard.boardArray[2].textContent != '' &&
+                    gameBoard.boardArray[2].textContent === gameBoard.boardArray[5].textContent &&
+                    gameBoard.boardArray[2].textContent === gameBoard.boardArray[8].textContent) {
+                    console.log('winner!');
+                } else if (gameBoard.boardArray[0].textContent != '' &&
+                    gameBoard.boardArray[0].textContent === gameBoard.boardArray[4].textContent &&
+                    gameBoard.boardArray[0].textContent === gameBoard.boardArray[8].textContent) {
+                    console.log('winner!');
+                } else if (gameBoard.boardArray[2].textContent != '' &&
+                    gameBoard.boardArray[2].textContent === gameBoard.boardArray[4].textContent &&
+                    gameBoard.boardArray[2].textContent === gameBoard.boardArray[6].textContent) {
+                    console.log('winner!');
+                } else if (turnCount === 9) {
+                    console.log('tie!');
+                };
             });
         });
     });
