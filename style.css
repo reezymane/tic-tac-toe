@@ -43,6 +43,11 @@ header {
 footer {
     /*Set footer height*/
     height: 150px;
+
+    /*Center winner text*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .boardAndPlayers {
