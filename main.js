@@ -72,39 +72,151 @@ const displayController = (() => {
                 if (gameBoard.boardArray[0].textContent != '' &&
                     gameBoard.boardArray[0].textContent === gameBoard.boardArray[1].textContent &&
                     gameBoard.boardArray[0].textContent === gameBoard.boardArray[2].textContent) {
-                    console.log('winner!');
+
+                        // Chooses which player to display as winner
+                        if (gameBoard.boardArray[0].textContent === player1.marker) {
+                            const winner = document.createElement('p');
+                            winner.textContent = 'That\'s three ' + player1.marker + '\'s in a row! ' + player1.name + ' wins!'
+
+                            const footer = document.getElementById('footer');
+                            footer.appendChild(winner);
+                        } else {
+                            const winner = document.createElement('p');
+                            winner.textContent = 'That\'s three ' + player2.marker + '\'s in a row! ' + player2.name + ' wins!'
+
+                            const footer = document.getElementById('footer');
+                            footer.appendChild(winner);
+                        };
                 } else if (gameBoard.boardArray[3].textContent != '' &&
                     gameBoard.boardArray[3].textContent === gameBoard.boardArray[4].textContent &&
                     gameBoard.boardArray[3].textContent === gameBoard.boardArray[5].textContent) {
-                    console.log('winner!');
+                    
+                        if (gameBoard.boardArray[3].textContent === player1.marker) {
+                            const winner = document.createElement('p');
+                            winner.textContent = 'That\'s three ' + player1.marker + '\'s in a row! ' + player1.name + ' wins!'
+
+                            const footer = document.getElementById('footer');
+                            footer.appendChild(winner);
+                        } else {
+                            const winner = document.createElement('p');
+                            winner.textContent = 'That\'s three ' + player2.marker + '\'s in a row! ' + player2.name + ' wins!'
+
+                            const footer = document.getElementById('footer');
+                            footer.appendChild(winner);
+                        };
                 } else if (gameBoard.boardArray[6].textContent != '' &&
                     gameBoard.boardArray[6].textContent === gameBoard.boardArray[7].textContent &&
                     gameBoard.boardArray[6].textContent === gameBoard.boardArray[8].textContent) {
-                    console.log('winner!');
+                    
+                        if (gameBoard.boardArray[6].textContent === player1.marker) {
+                            const winner = document.createElement('p');
+                            winner.textContent = 'That\'s three ' + player1.marker + '\'s in a row! ' + player1.name + ' wins!'
+
+                            const footer = document.getElementById('footer');
+                            footer.appendChild(winner);
+                        } else {
+                            const winner = document.createElement('p');
+                            winner.textContent = 'That\'s three ' + player2.marker + '\'s in a row! ' + player2.name + ' wins!'
+
+                            const footer = document.getElementById('footer');
+                            footer.appendChild(winner);
+                        };
                 } else if (gameBoard.boardArray[0].textContent != '' &&
                     gameBoard.boardArray[0].textContent === gameBoard.boardArray[3].textContent &&
                     gameBoard.boardArray[0].textContent === gameBoard.boardArray[6].textContent) {
-                    console.log('winner!');
+                    
+                        if (gameBoard.boardArray[0].textContent === player1.marker) {
+                            const winner = document.createElement('p');
+                            winner.textContent = 'That\'s three ' + player1.marker + '\'s in a row! ' + player1.name + ' wins!'
+
+                            const footer = document.getElementById('footer');
+                            footer.appendChild(winner);
+                        } else {
+                            const winner = document.createElement('p');
+                            winner.textContent = 'That\'s three ' + player2.marker + '\'s in a row! ' + player2.name + ' wins!'
+
+                            const footer = document.getElementById('footer');
+                            footer.appendChild(winner);
+                        };
                 } else if (gameBoard.boardArray[1].textContent != '' &&
                     gameBoard.boardArray[1].textContent === gameBoard.boardArray[4].textContent &&
                     gameBoard.boardArray[1].textContent === gameBoard.boardArray[7].textContent) {
-                    console.log('winner!');
+                    
+                        if (gameBoard.boardArray[1].textContent === player1.marker) {
+                            const winner = document.createElement('p');
+                            winner.textContent = 'That\'s three ' + player1.marker + '\'s in a row! ' + player1.name + ' wins!'
+
+                            const footer = document.getElementById('footer');
+                            footer.appendChild(winner);
+                        } else {
+                            const winner = document.createElement('p');
+                            winner.textContent = 'That\'s three ' + player2.marker + '\'s in a row! ' + player2.name + ' wins!'
+
+                            const footer = document.getElementById('footer');
+                            footer.appendChild(winner);
+                        };
                 } else if (gameBoard.boardArray[2].textContent != '' &&
                     gameBoard.boardArray[2].textContent === gameBoard.boardArray[5].textContent &&
                     gameBoard.boardArray[2].textContent === gameBoard.boardArray[8].textContent) {
-                    console.log('winner!');
+                    
+                        if (gameBoard.boardArray[2].textContent === player1.marker) {
+                            const winner = document.createElement('p');
+                            winner.textContent = 'That\'s three ' + player1.marker + '\'s in a row! ' + player1.name + ' wins!'
+
+                            const footer = document.getElementById('footer');
+                            footer.appendChild(winner);
+                        } else {
+                            const winner = document.createElement('p');
+                            winner.textContent = 'That\'s three ' + player2.marker + '\'s in a row! ' + player2.name + ' wins!'
+
+                            const footer = document.getElementById('footer');
+                            footer.appendChild(winner);
+                        };
                 } else if (gameBoard.boardArray[0].textContent != '' &&
                     gameBoard.boardArray[0].textContent === gameBoard.boardArray[4].textContent &&
                     gameBoard.boardArray[0].textContent === gameBoard.boardArray[8].textContent) {
-                    console.log('winner!');
+                    
+                        if (gameBoard.boardArray[0].textContent === player1.marker) {
+                            const winner = document.createElement('p');
+                            winner.textContent = 'That\'s three ' + player1.marker + '\'s in a row! ' + player1.name + ' wins!'
+
+                            const footer = document.getElementById('footer');
+                            footer.appendChild(winner);
+                        } else {
+                            const winner = document.createElement('p');
+                            winner.textContent = 'That\'s three ' + player2.marker + '\'s in a row! ' + player2.name + ' wins!'
+
+                            const footer = document.getElementById('footer');
+                            footer.appendChild(winner);
+                        };
                 } else if (gameBoard.boardArray[2].textContent != '' &&
                     gameBoard.boardArray[2].textContent === gameBoard.boardArray[4].textContent &&
                     gameBoard.boardArray[2].textContent === gameBoard.boardArray[6].textContent) {
-                    console.log('winner!');
+                    
+                        if (gameBoard.boardArray[2].textContent === player1.marker) {
+                            const winner = document.createElement('p');
+                            winner.textContent = 'That\'s three ' + player1.marker + '\'s in a row! ' + player1.name + ' wins!'
+
+                            const footer = document.getElementById('footer');
+                            footer.appendChild(winner);
+                        } else {
+                            const winner = document.createElement('p');
+                            winner.textContent = 'That\'s three ' + player2.marker + '\'s in a row! ' + player2.name + ' wins!'
+
+                            const footer = document.getElementById('footer');
+                            footer.appendChild(winner);
+                        };
                 } else if (turnCount === 9) {
-                    console.log('tie!');
+                    
+                    const tie = document.createElement('p');
+                    tie.textContent = 'Looks like the board is filled but no three in a row\'s. It\'s a tie!'
+
+                    const footer = document.getElementById('footer');
+                    footer.appendChild(tie);
                 };
             });
         });
     });
+
+
 })();
