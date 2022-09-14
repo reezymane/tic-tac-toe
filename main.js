@@ -246,6 +246,11 @@ const displayController = (() => {
                 };
             });
 
+            const wintext = document.getElementById('footer');
+            if (wintext.firstChild != null) {
+                wintext.removeChild(wintext.firstChild);
+            }
+
             player1 = undefined;
             player2 = undefined;
 
