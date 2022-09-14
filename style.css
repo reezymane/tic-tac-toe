@@ -35,6 +35,8 @@ header {
     /*Vertically align gameContainer and footer*/
     display: flex;
     flex-direction: column;
+
+    padding-top: 50px;
 }
 
 footer {
@@ -58,8 +60,6 @@ footer {
     grid-template-columns: repeat(3, 200px);
     grid-template-rows: repeat(3, 200px);
     gap: 20px;
-
-    padding-top: 50px;
 
     background-color: white;
 }
