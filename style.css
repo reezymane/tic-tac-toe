@@ -74,3 +74,9 @@ footer {
     background-color: black;
     color: antiquewhite;
 }
+
+button {
+    /*Set size for start and restart button*/
+    height: 50px;
+    width: 125px;
+}
