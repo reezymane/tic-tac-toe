@@ -63,6 +63,8 @@ footer {
     grid-template-columns: repeat(3, 200px);
     grid-template-rows: repeat(3, 200px);
     gap: 20px;
+
+    padding-top: 50px;
 }
 
 .gameBoard {
