@@ -75,10 +75,21 @@ footer {
     /*Set background for gameboard*/
     background-color: black;
     color: antiquewhite;
+
+    /*Center player markers vertically and horizontally*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
     /*Set size for start and restart button*/
     height: 50px;
     width: 125px;
+
+    /*Set border style*/
+    border-radius: 15px;
+    border-width: 1px;
+
+    background-color: antiquewhite;
 }
