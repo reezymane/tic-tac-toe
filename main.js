@@ -218,5 +218,13 @@ const displayController = (() => {
         });
     });
 
-
+    const restart = document.querySelector('.restart');
+    restart.addEventListener('click', () => {
+        const board = document.querySelectorAll('.gameBoard');
+        board.forEach((div) => {
+            if (div.firstChild != null) {
+                div.removeChild(div.firstChild);
+            }
+        });
+    });
 })();
