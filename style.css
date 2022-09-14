@@ -53,7 +53,10 @@ footer {
     /*playerInfo grows to fill remaining space*/
     flex: 1;
 
-
+    /*Center buttons horizontally and put space between them*/
+    display: flex;
+    justify-content: center;
+    gap: 50px;
 }
     
 .gameContainer {
