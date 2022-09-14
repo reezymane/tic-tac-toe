@@ -80,6 +80,10 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    /*Set marker font size*/
+    font-size: 50px;
+    font-weight: bold;
 }
 
 button {
