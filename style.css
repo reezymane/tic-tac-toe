@@ -41,7 +41,7 @@ header {
 
 footer {
     /*Set footer height*/
-    height: 200px;
+    height: 150px;
 }
 
 .boardAndPlayers {
@@ -52,6 +52,8 @@ footer {
 .playerInfo {
     /*playerInfo grows to fill remaining space*/
     flex: 1;
+
+
 }
     
 .gameContainer {
