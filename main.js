@@ -44,6 +44,7 @@ const displayController = (() => {
 
         // Switches turns between users and Adds players' markers to gameboard
         let turnCount = 0;
+        const controller = new AbortController();
         gameBoard.boardArray.forEach((div) => {
             div.addEventListener('click', () => {
                 // Checks div for a current player marker
@@ -87,6 +88,8 @@ const displayController = (() => {
                             const footer = document.getElementById('footer');
                             footer.appendChild(winner);
                         };
+
+                        controller.abort();
                 } else if (gameBoard.boardArray[3].textContent != '' &&
                     gameBoard.boardArray[3].textContent === gameBoard.boardArray[4].textContent &&
                     gameBoard.boardArray[3].textContent === gameBoard.boardArray[5].textContent) {
@@ -104,6 +107,8 @@ const displayController = (() => {
                             const footer = document.getElementById('footer');
                             footer.appendChild(winner);
                         };
+
+                        controller.abort();
                 } else if (gameBoard.boardArray[6].textContent != '' &&
                     gameBoard.boardArray[6].textContent === gameBoard.boardArray[7].textContent &&
                     gameBoard.boardArray[6].textContent === gameBoard.boardArray[8].textContent) {
@@ -121,6 +126,8 @@ const displayController = (() => {
                             const footer = document.getElementById('footer');
                             footer.appendChild(winner);
                         };
+
+                        controller.abort();
                 } else if (gameBoard.boardArray[0].textContent != '' &&
                     gameBoard.boardArray[0].textContent === gameBoard.boardArray[3].textContent &&
                     gameBoard.boardArray[0].textContent === gameBoard.boardArray[6].textContent) {
@@ -138,6 +145,8 @@ const displayController = (() => {
                             const footer = document.getElementById('footer');
                             footer.appendChild(winner);
                         };
+
+                        controller.abort();
                 } else if (gameBoard.boardArray[1].textContent != '' &&
                     gameBoard.boardArray[1].textContent === gameBoard.boardArray[4].textContent &&
                     gameBoard.boardArray[1].textContent === gameBoard.boardArray[7].textContent) {
@@ -155,6 +164,8 @@ const displayController = (() => {
                             const footer = document.getElementById('footer');
                             footer.appendChild(winner);
                         };
+
+                        controller.abort();
                 } else if (gameBoard.boardArray[2].textContent != '' &&
                     gameBoard.boardArray[2].textContent === gameBoard.boardArray[5].textContent &&
                     gameBoard.boardArray[2].textContent === gameBoard.boardArray[8].textContent) {
@@ -172,6 +183,8 @@ const displayController = (() => {
                             const footer = document.getElementById('footer');
                             footer.appendChild(winner);
                         };
+
+                        controller.abort();
                 } else if (gameBoard.boardArray[0].textContent != '' &&
                     gameBoard.boardArray[0].textContent === gameBoard.boardArray[4].textContent &&
                     gameBoard.boardArray[0].textContent === gameBoard.boardArray[8].textContent) {
@@ -189,6 +202,8 @@ const displayController = (() => {
                             const footer = document.getElementById('footer');
                             footer.appendChild(winner);
                         };
+
+                        controller.abort();
                 } else if (gameBoard.boardArray[2].textContent != '' &&
                     gameBoard.boardArray[2].textContent === gameBoard.boardArray[4].textContent &&
                     gameBoard.boardArray[2].textContent === gameBoard.boardArray[6].textContent) {
@@ -206,6 +221,8 @@ const displayController = (() => {
                             const footer = document.getElementById('footer');
                             footer.appendChild(winner);
                         };
+
+                        controller.abort();
                 } else if (turnCount === 9) {
                     
                     const tie = document.createElement('p');
@@ -213,18 +230,26 @@ const displayController = (() => {
 
                     const footer = document.getElementById('footer');
                     footer.appendChild(tie);
+
+                    controller.abort();
+                };
+            }, { signal: controller.signal });
+        });
+
+        // Clears the gameboard and both player objects
+        const restart = document.querySelector('.restart');
+        restart.addEventListener('click', () => {
+            const board = document.querySelectorAll('.gameBoard');
+            board.forEach((div) => {
+                if (div.firstChild != null) {
+                    div.removeChild(div.firstChild);
                 };
             });
-        });
-    });
 
-    const restart = document.querySelector('.restart');
-    restart.addEventListener('click', () => {
-        const board = document.querySelectorAll('.gameBoard');
-        board.forEach((div) => {
-            if (div.firstChild != null) {
-                div.removeChild(div.firstChild);
-            }
+            player1 = undefined;
+            player2 = undefined;
+
+            controller.abort();
         });
     });
 })();
